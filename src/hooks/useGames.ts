@@ -11,7 +11,7 @@ export interface Game {
     name: string
     background_image: string
     parent_platforms: { platform: Platform}[]
-    metacritic: string
+    metacritic: number
 }
 
 const useGames = (genre: Genre | null) => useData<Game>('/games', {params: {genres: genre?.id}}, [genre?.id])

@@ -6,7 +6,7 @@ import {useState} from "react";
 import {Genre} from "./hooks/useGenres";
 
 function App() {
-
+    document.title = "GameHub"
     const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null)
 
     return (
@@ -24,7 +24,7 @@ function App() {
                 <Navbar></Navbar>
             </GridItem>
             <Show above="lg">
-                <GridItem area="aside" paddingX={5}>
+                <GridItem area="aside" paddingX={5} paddingY="10px">
                     <GenreList selectedGenre={selectedGenre} onSelectGenre={(genre) => setSelectedGenre(genre)}/>
                 </GridItem>
             </Show>
