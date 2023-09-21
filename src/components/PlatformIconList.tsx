@@ -27,7 +27,7 @@ export const PlatformIconList = ({platforms}: Props) => {
     return (
         <HStack>
             {platforms.map((platform) => (
-                <Tooltip label={platform.name} fontSize='md'>
+                <Tooltip label={platform.name} fontSize='md' key={platform.name}>
                     <span tabIndex={0}>
                         <Icon as={IconMap[platform.slug]} color="gray.500"></Icon>
                     </span>
