@@ -1,14 +1,14 @@
 import {Game} from "../hooks/useGames";
 import {Card, CardBody, Heading, Image, CardFooter, HStack, Skeleton} from "@chakra-ui/react";
-import {PlatformIconList} from "./PlatformIconList";
-import {CriticScore} from "./CriticScore";
+import PlatformIconList from "./PlatformIconList";
+import CriticScore from "./CriticScore";
 import getCroppedImageUrl from '../services/ImageCropper';
 
 interface Props {
     game: Game
 }
 
-export const GameCard = ({game}: Props) => {
+const GameCard = ({game}: Props) => {
     return (
         <Card>
             <Image src={getCroppedImageUrl(game.background_image)}/>
@@ -22,3 +22,5 @@ export const GameCard = ({game}: Props) => {
         </Card>
     );
 };
+
+export default GameCard;
