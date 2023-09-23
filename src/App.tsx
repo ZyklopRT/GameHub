@@ -17,7 +17,6 @@ export interface GameQuery {
 }
 
 function App() {
-    document.title = "GameHub"
     const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery)
 
     return (
