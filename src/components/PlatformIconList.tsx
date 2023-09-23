@@ -1,4 +1,4 @@
-import {Platform} from "../hooks/useGames";
+import {Platform} from "../hooks/usePlatforms";
 import {HStack, Icon, Tooltip } from "@chakra-ui/react";
 import {FaWindows, FaPlaystation, FaXbox, FaApple, FaLinux, FaAndroid} from "react-icons/fa";
 import {MdPhoneIphone} from "react-icons/md";
@@ -35,6 +35,6 @@ const PlatformIconList = ({platforms}: Props) => {
             ))}
         </HStack>
     );
-};
+}
 
 export default PlatformIconList;
