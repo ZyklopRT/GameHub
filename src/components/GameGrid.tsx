@@ -1,4 +1,4 @@
-import {Text, SimpleGrid} from '@chakra-ui/react'
+import {Text, SimpleGrid, useToast} from '@chakra-ui/react'
 import useGames from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
@@ -13,8 +13,23 @@ interface Props {
 const GameGrid = ({gameQuery}: Props) => {
     const {data, error, isLoading} = useGames(gameQuery);
     const skeletons = [1, 2, 3, 4, 5, 6];
+    const gameErrorToastId = 'game-error-toast';
+    const toast = useToast();
 
-    if (error) return <Text>{error}</Text>;
+    if (error) {
+        if (!toast.isActive(gameErrorToastId)) {
+            toast({
+                id: gameErrorToastId,
+                title: 'Network Error',
+                description: error,
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+            });
+        }
+
+        return null;
+    };
 
     return (
         <SimpleGrid
