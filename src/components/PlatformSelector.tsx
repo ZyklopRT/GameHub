@@ -13,17 +13,14 @@ const PlatformSelector = ({onSelectPlatform, selectedPlatform}: Props) => {
     if (error) return null;
 
     return (
-        <HStack justifyContent="space-between">
-            <Heading>{ selectedPlatform?.name || 'All' } Games</Heading>
-            <Menu>
-                <MenuButton as={Button} rightIcon={<BsChevronDown/>}>
-                    {selectedPlatform?.name || 'Platforms'}
-                </MenuButton>
-                <MenuList>
-                    {data.map(platform => <MenuItem key={platform.id} onClick={() => onSelectPlatform(platform)}>{platform.name}</MenuItem>)}
-                </MenuList>
-            </Menu>
-        </HStack>
+        <Menu>
+            <MenuButton as={Button} rightIcon={<BsChevronDown/>}>
+                {selectedPlatform?.name || 'Platforms'}
+            </MenuButton>
+            <MenuList>
+                {data.map(platform => <MenuItem key={platform.id} onClick={() => onSelectPlatform(platform)}>{platform.name}</MenuItem>)}
+            </MenuList>
+        </Menu>
     );
 };
 
