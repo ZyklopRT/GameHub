@@ -40,7 +40,9 @@ function App() {
             </Show>
             <GridItem area="main" padding="10px">
                 <HStack justifyContent="space-between">
-                    <Heading>{gameQuery.platform?.name || 'All'} Games</Heading>
+                    <Show above="lg">
+                        <Heading>{gameQuery.platform?.name || 'All'} Games</Heading>
+                    </Show>
                     <HStack spacing={4}>
                         <PlatformSelector selectedPlatform={gameQuery.platform}
                                           onSelectPlatform={(platform) => setGameQuery({...gameQuery, platform})}/>
