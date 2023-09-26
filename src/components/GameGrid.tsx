@@ -21,7 +21,7 @@ const GameGrid = ({gameQuery}: Props) => {
             toast({
                 id: gameErrorToastId,
                 title: 'Network Error',
-                description: error,
+                description: error.message,
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
@@ -43,7 +43,7 @@ const GameGrid = ({gameQuery}: Props) => {
                         <GameCardSkeleton />
                     </GameCardContainer>
                 ))}
-            {!isLoading && data.map((game) => (
+            {!isLoading && data?.results.map((game) => (
                 <GameCardContainer key={game.id}>
                     <GameCard game={game} />
                 </GameCardContainer>
