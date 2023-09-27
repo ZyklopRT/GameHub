@@ -14,6 +14,7 @@ export interface GameQuery {
     platform: Platform | null;
     sortOrder: string;
     search: string;
+    pageSize: 30;
 }
 
 function App() {
