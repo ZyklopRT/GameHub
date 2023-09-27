@@ -9,7 +9,7 @@ const usePlatforms = () => {
         queryKey: ['platforms'],
         queryFn: ParentPlatformService.getAll,
         staleTime: 24 * 60 * 60 * 1000, // 24h
-        initialData: {count: platforms.length, results: platforms, next: null, previous: null},
+        initialData: platforms,
         initialDataUpdatedAt: 1695751349568
     })
 }
