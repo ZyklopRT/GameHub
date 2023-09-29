@@ -5,18 +5,16 @@ import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import useGameQueryStore from "./store";
 
 
 const GameGrid = () => {
-  const gameQuery = useGameQueryStore(s => s.gameQuery);
   const {
     data,
     error,
     isLoading,
     fetchNextPage,
     hasNextPage
-  } = useGames(gameQuery);
+  } = useGames();
   const skeletons = [1, 2, 3, 4, 5, 6];
   const gameErrorToastId = "game-error-toast";
   const toast = useToast();
