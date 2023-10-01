@@ -5,6 +5,7 @@ import ExpandableText from "../components/ExpandableText";
 import { DefinitionItem } from "../components/DefinitionItem";
 import CriticScore from "../components/CriticScore";
 import GameAttributes from "../components/GameAttributes";
+import { GameTrailer } from "../components/GameTrailer";
 
 export const GameDetailPage = () => {
 
@@ -17,14 +18,22 @@ export const GameDetailPage = () => {
 
 
   return (
-    <>
-      <Heading>{game.name}</Heading>
-      <Box marginY={4}>
-        <ExpandableText>
-          {game.description_raw}
-        </ExpandableText>
+    <SimpleGrid columns={{
+      sm: 1,
+      md: 2
+    }}>
+      <Box>
+        <Heading>{game.name}</Heading>
+        <Box marginY={4}>
+          <ExpandableText>
+            {game.description_raw}
+          </ExpandableText>
+        </Box>
+        <GameAttributes game={game} />
       </Box>
-      <GameAttributes game={game} />
-    </>
+      <Box>
+        <GameTrailer game={game} />
+      </Box>
+    </SimpleGrid>
   );
 };
