@@ -1,8 +1,9 @@
 import platforms from "../data/platforms";
 import {useQuery} from "@tanstack/react-query";
 import {FetchResponse} from "../services/ApiClient";
-import ParentPlatformService, {Platform} from "../services/ParentPlatformService";
+import ParentPlatformService from "../services/ParentPlatformService";
 import ms from "ms";
+import { Platform } from "../entities/Platform";
 
 const usePlatforms = () => {
     return useQuery<FetchResponse<Platform>, Error, FetchResponse<Platform>>({
