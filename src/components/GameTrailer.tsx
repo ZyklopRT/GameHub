@@ -1,5 +1,4 @@
 import useTrailers from "../hooks/useTrailers";
-import { Game } from "../entities/Game";
 
 interface Props {
   gameId: number;

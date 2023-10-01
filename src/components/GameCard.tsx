@@ -4,7 +4,7 @@ import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/ImageCropper";
 import Emoji from "./Emoji";
 import { Link } from "react-router-dom";
-import { Game } from "../entities/Game";
+import Game from "../entities/Game";
 
 interface Props {
   game: Game;
