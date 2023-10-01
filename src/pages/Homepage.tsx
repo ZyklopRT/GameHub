@@ -18,7 +18,7 @@ export const Homepage = () => {
       }}
     >
       <Show above="lg">
-        <GridItem area="aside" paddingX={5} paddingY="10px">
+        <GridItem area="aside" paddingRight={5} paddingY="10px">
           <GenreList />
         </GridItem>
       </Show>

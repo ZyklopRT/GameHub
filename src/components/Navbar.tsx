@@ -7,7 +7,8 @@ export const Navbar = () => {
   return (
     <>
       <HStack padding="10px">
-        <Image src={logo} boxSize="60px"></Image>
+        <Image src={logo} boxSize="60px">
+        </Image>
         <SearchInput />
         <ColorModeSwitch></ColorModeSwitch>
       </HStack>
