@@ -2,12 +2,12 @@ import useTrailers from "../hooks/useTrailers";
 import { Game } from "../entities/Game";
 
 interface Props {
-  game: Game;
+  gameId: number;
 }
 
-export const GameTrailer = ({ game }: Props) => {
+export const GameTrailer = ({ gameId }: Props) => {
 
-  const { data, error, isLoading } = useTrailers(game.id);
+  const { data, error, isLoading } = useTrailers(gameId);
 
   if (error) throw error;
 

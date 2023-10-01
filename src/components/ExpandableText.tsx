@@ -6,7 +6,7 @@ interface Props {
   maxChars?: number
 }
 
-const ExpandableText = ({ children, maxChars = 400 }: Props) => {
+const ExpandableText = ({ children, maxChars = 200 }: Props) => {
 
   const [expanded, setExpanded] = useState(false);
 
