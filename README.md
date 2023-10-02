@@ -15,7 +15,7 @@ To get started with GameHub, follow these steps:
 
 Be aware that this project does not use any security mechanisms for keeping the API key secret. Thus, this app is not suitable for production.
 
-## :boom: Disclaimer
+## :grey_exclamation: Disclaimer
 
 This project is the result of the ReactJS course from CodeWithMosh and is mostly the same with his finished GameHub project. 
 
@@ -24,6 +24,10 @@ So the idea and the development process can only be attributed to Mosh Hamedani.
 I can recommend Mosh Hamedani's Beginner and Intermediate ReactJS course for all people who want to learn the basics, best practices & common pitfalls and also more advanced topics.
 
 You can find the course on [CodeWithMosh](https://codewithmosh.com/). I don't get any compensation for this honest comment.
+
+## :bomb: Dependencies
+
+This app is based on the analysis of information from thousands of video games from the [Rawg.io](https://rawg.io/) API. Thus, the app is quite useless in case of a wrong API key or a down phase of the Rawg.io website.
 
 ## :books: Some libaries used
 
